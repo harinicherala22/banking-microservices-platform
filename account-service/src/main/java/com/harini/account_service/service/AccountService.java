@@ -22,7 +22,7 @@ public class AccountService {
         account.setBalance(0.0);
         repo.save(account);
 
-        return "Account Created";
+        return "Account Created successfully";
     }
 
     @Cacheable(value = "accounts", key = "#email")
@@ -47,7 +47,7 @@ public class AccountService {
             System.out.println("Kafka unavailable");
         }
 
-        return "Amount Deposited";
+        return "Amount Deposited successfully";
     }
 
     @CacheEvict(value = "accounts", key = "#email")
